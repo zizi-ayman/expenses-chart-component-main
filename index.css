@@ -1,0 +1,21 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+* {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-color: hsl(27, 66%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*----------------------balance------------------------*/
+
+.balance{
+    background-color: hsl(10, 79%, 65%);
+}
