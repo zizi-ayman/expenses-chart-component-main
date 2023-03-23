@@ -19,3 +19,7 @@ body{
 .balance{
     background-color: hsl(10, 79%, 65%);
 }
+.balance_info{
+    border-radius: 25px;
+    background-color: white;
+}

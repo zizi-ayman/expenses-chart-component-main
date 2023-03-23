@@ -17,10 +17,33 @@ fetch("./data.json")
       data: {
           labels: xvalue,
           datasets: [{
-            data: yvalue
+            data: yvalue,
+            backgroundColor: function(context) {
+              var index = context.dataIndex;
+              var value = context.dataset.data[index];
+              return index === new Date().getDay() ? 'hsl(186, 34%, 60%)' : 'hsl(10, 79%, 65%)';
+            }
           }]
       },
-      options: {}
+      options: {
+        title: {
+          display: true,
+          text: 'Spending - Last 7 days'
+        },
+        scales: {
+          xAxes: [{
+              gridLines: {
+                  display: false, // turn off x-axis grid lines
+              }
+          }],
+          yAxes: [{
+              display: false, // turn off the y-axis
+              gridLines: {
+                  display: false, // turn off y-axis grid lines
+              }
+          }]
+        },
+      }
     });
   })
 
