@@ -12,7 +12,8 @@ fetch("./data.json")
       yvalue.push(element.amount);
     });
     
-    new Chart("myChart", {
+    var ctx = document.getElementById('myChart').getContext('2d');
+    new Chart( ctx, {
       type: "bar",
       data: {
           labels: xvalue,
@@ -26,9 +27,14 @@ fetch("./data.json")
           }]
       },
       options: {
+        legend: {
+          display: false
+        },
         title: {
           display: true,
-          text: 'Spending - Last 7 days'
+          text: 'Spending - Last 7 days',
+          fontSize: 17,
+          fontColor: 'black'
         },
         scales: {
           xAxes: [{

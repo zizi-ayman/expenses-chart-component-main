@@ -13,13 +13,30 @@ body{
     align-items: center;
     flex-direction: column;
 }
+main{
+    display: flex;
+    flex-direction: column;
+}
 
 /*----------------------balance------------------------*/
 
 .balance{
+    color: white;
     background-color: hsl(10, 79%, 65%);
+    border-radius: 11px;
 }
 .balance_info{
-    border-radius: 25px;
-    background-color: white;
+    border-radius: 11px;
+    background-color: hsl(33, 100%, 98%);
+    color: black;
+}
+
+.month_total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#myChart {
+    width: 30%;
+    height: 30%;
 }
